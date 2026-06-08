@@ -1,0 +1,67 @@
+Regression Analysis Summary
+===========================
+
+Model 1: Housing affordability gap over time
+Dependent variable: log(home value / median household income)
+
+                               OLS Regression Results                               
+====================================================================================
+Dep. Variable:     log_home_value_to_income   R-squared:                       0.171
+Model:                                  OLS   Adj. R-squared:                  0.135
+Method:                       Least Squares   F-statistic:                     4.758
+Date:                      Mon, 08 Jun 2026   Prob (F-statistic):             0.0396
+Time:                              13:30:37   Log-Likelihood:                 21.488
+No. Observations:                        25   AIC:                            -38.98
+Df Residuals:                            23   BIC:                            -36.54
+Df Model:                                 1                                         
+Covariance Type:                  nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         1.2279      0.041     29.608      0.000       1.142       1.314
+year_centered     0.0065      0.003      2.181      0.040       0.000       0.013
+==============================================================================
+Omnibus:                        4.140   Durbin-Watson:                   0.265
+Prob(Omnibus):                  0.126   Jarque-Bera (JB):                1.876
+Skew:                           0.338   Prob(JB):                        0.391
+Kurtosis:                       1.840   Cond. No.                         27.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Model 2: Home value growth vs inflation and income growth
+Dependent variable: Zillow Home Value YoY growth
+
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     zhvi_home_value_yoy   R-squared:                       0.271
+Model:                             OLS   Adj. R-squared:                  0.162
+Method:                  Least Squares   F-statistic:                     2.479
+Date:                 Mon, 08 Jun 2026   Prob (F-statistic):             0.0907
+Time:                         13:30:37   Log-Likelihood:                -73.275
+No. Observations:                   24   AIC:                             154.6
+Df Residuals:                       20   BIC:                             159.3
+Df Model:                            3                                         
+Covariance Type:             nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                    -0.2738      2.318     -0.118      0.907      -5.108       4.561
+cpi_all_yoy                   1.0318      0.864      1.194      0.247      -0.771       2.835
+median_income_nominal_yoy     0.6675      0.463      1.442      0.165      -0.298       1.633
+post2020                      1.6017      3.329      0.481      0.636      -5.342       8.545
+==============================================================================
+Omnibus:                        3.692   Durbin-Watson:                   0.704
+Prob(Omnibus):                  0.158   Jarque-Bera (JB):                2.562
+Skew:                          -0.633   Prob(JB):                        0.278
+Kurtosis:                       2.020   Cond. No.                         14.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Interpretation notes:
+- Model 1 tests whether the home value-to-income ratio increased over time.
+- Model 2 compares home value growth with general inflation and income growth.
+- These regressions are descriptive, not causal.
