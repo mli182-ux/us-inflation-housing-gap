@@ -40,6 +40,8 @@ Main steps:
 5. Calculate the home value-to-income ratio.
 6. Run exploratory OLS regressions.
 
+The main analysis ends in 2024 because the annual median household income series used in this project is only available through 2024. Some CPI and housing series may have newer observations, but including 2025 would make the income comparison and home value-to-income ratio incomplete.
+
 ## Project Structure
 
 ```text

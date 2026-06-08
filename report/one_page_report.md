@@ -10,6 +10,8 @@ This project uses publicly available economic data from FRED, Zillow/FRED, and C
 
 The workflow includes data downloading, cleaning, annual aggregation, normalized trend comparison, affordability ratio calculation, visualization, and exploratory OLS regression.
 
+The main analysis ends in 2024 because the annual median household income series used in this project is only available through 2024. Some CPI and housing series may have newer observations, but including 2025 would make the income comparison and home value-to-income ratio incomplete.
+
 ## Main Findings
 
 ### 1. Housing costs grew faster than overall inflation
